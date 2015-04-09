@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "XMCommon"
-  s.version      = "0.0.1"
+  s.version      = "1.0.0"
   s.summary      = "XMCommon is a common class."
   s.description  = <<-DESC
                    A longer description of XMCommon in Markdown format.
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author             = { "rgshio" => "754086445@qq.com" }
   s.platform     = :ios, "5.0"
-  s.source       = { :git => "https://github.com/rgshio/XMCommon.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/rgshio/XMCommon.git", :tag => "1.0.0" }
   s.source_files  = "XMCommon/*"
   s.requires_arc = true
 end
