@@ -14,9 +14,7 @@
 		C5E58EAC1A70AC0A00734174 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E58EAB1A70AC0A00734174 /* main.m */; };
 		C5E58EAF1A70AC0A00734174 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E58EAE1A70AC0A00734174 /* AppDelegate.m */; };
 		C5E58EB21A70AC0A00734174 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E58EB11A70AC0A00734174 /* ViewController.m */; };
-		C5E58EB51A70AC0A00734174 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E58EB31A70AC0A00734174 /* Main.storyboard */; };
 		C5E58EB71A70AC0A00734174 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5E58EB61A70AC0A00734174 /* Images.xcassets */; };
-		C5E58EBA1A70AC0A00734174 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5E58EB81A70AC0A00734174 /* LaunchScreen.xib */; };
 		C5E58EC61A70AC0A00734174 /* XMCommonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E58EC51A70AC0A00734174 /* XMCommonTests.m */; };
 /* End PBXBuildFile section */
 
@@ -225,7 +223,6 @@
 					};
 					C5E58EBE1A70AC0A00734174 = {
 						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = C5E58EA51A70AC0A00734174;
 					};
 				};
 			};
@@ -253,8 +250,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5E58EB51A70AC0A00734174 /* Main.storyboard in Resources */,
-				C5E58EBA1A70AC0A00734174 /* LaunchScreen.xib in Resources */,
 				C5E58EB71A70AC0A00734174 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,7 +419,6 @@
 		C5E58ECD1A70AC0A00734174 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -436,14 +430,12 @@
 				INFOPLIST_FILE = XMCommonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XMCommon.app/XMCommon";
 			};
 			name = Debug;
 		};
 		C5E58ECE1A70AC0A00734174 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -451,7 +443,6 @@
 				INFOPLIST_FILE = XMCommonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XMCommon.app/XMCommon";
 			};
 			name = Release;
 		};
