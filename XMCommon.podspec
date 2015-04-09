@@ -3,15 +3,15 @@ Pod::Spec.new do |s|
   s.version      = "1.0.0"
   s.summary      = "XMCommon is a common class."
   s.description  = <<-DESC
-                   A longer description of XMCommon in Markdown format.
+                   It is always used on iOS, which implement by Objective-C.
                    DESC
   s.homepage     = "https://github.com/rgshio/XMCommon"
   s.license      = "MIT"
-  s.author             = { "rgshio" => "754086445@qq.com" }
+  s.author       = { "rgshio" => "754086445@qq.com" }
   s.platform     = :ios, "6.0"
   s.source       = { :git => "https://github.com/rgshio/XMCommon.git", :tag => "1.0.0" }
   s.source_files = "XMCommon/Classes/*"
-  s.frameworks"  = 'Foundation','UIKit','CoreGraphics','QuartzCore'
+  s.frameworks   = "Foundation","UIKit","CoreGraphics","QuartzCore"
   s.requires_arc = true
 
 end
