@@ -11,6 +11,9 @@
 		8663EC8E1AD65732004E902A /* UIImage+XMCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8663EC841AD65732004E902A /* UIImage+XMCommon.m */; };
 		8663EC8F1AD65732004E902A /* UIView+XMCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8663EC861AD65732004E902A /* UIView+XMCommon.m */; };
 		8663EC901AD65732004E902A /* XMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8663EC8C1AD65732004E902A /* XMTools.m */; };
+		8668D2F01B3A462A002B71F5 /* NSString+XMCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8668D2EF1B3A462A002B71F5 /* NSString+XMCommon.m */; };
+		8668D2F11B3A4A4E002B71F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E58EB31A70AC0A00734174 /* Main.storyboard */; };
+		8668D2F21B3A4A4F002B71F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E58EB31A70AC0A00734174 /* Main.storyboard */; };
 		C5E58EAC1A70AC0A00734174 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E58EAB1A70AC0A00734174 /* main.m */; };
 		C5E58EAF1A70AC0A00734174 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E58EAE1A70AC0A00734174 /* AppDelegate.m */; };
 		C5E58EB21A70AC0A00734174 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E58EB11A70AC0A00734174 /* ViewController.m */; };
@@ -42,6 +45,8 @@
 		8663EC8A1AD65732004E902A /* XMFontName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMFontName.h; sourceTree = "<group>"; };
 		8663EC8B1AD65732004E902A /* XMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMTools.h; sourceTree = "<group>"; };
 		8663EC8C1AD65732004E902A /* XMTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMTools.m; sourceTree = "<group>"; };
+		8668D2EE1B3A462A002B71F5 /* NSString+XMCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XMCommon.h"; sourceTree = "<group>"; };
+		8668D2EF1B3A462A002B71F5 /* NSString+XMCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XMCommon.m"; sourceTree = "<group>"; };
 		C5E58EA61A70AC0A00734174 /* XMCommon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMCommon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E58EAA1A70AC0A00734174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5E58EAB1A70AC0A00734174 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,6 +96,8 @@
 		8663EC801AD65732004E902A /* XMExtension */ = {
 			isa = PBXGroup;
 			children = (
+				8668D2EE1B3A462A002B71F5 /* NSString+XMCommon.h */,
+				8668D2EF1B3A462A002B71F5 /* NSString+XMCommon.m */,
 				8663EC811AD65732004E902A /* UIColor+XMCommon.h */,
 				8663EC821AD65732004E902A /* UIColor+XMCommon.m */,
 				8663EC831AD65732004E902A /* UIImage+XMCommon.h */,
@@ -251,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5E58EB71A70AC0A00734174 /* Images.xcassets in Resources */,
+				8668D2F11B3A4A4E002B71F5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8668D2F21B3A4A4F002B71F5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +284,7 @@
 				C5E58EAF1A70AC0A00734174 /* AppDelegate.m in Sources */,
 				C5E58EAC1A70AC0A00734174 /* main.m in Sources */,
 				8663EC8D1AD65732004E902A /* UIColor+XMCommon.m in Sources */,
+				8668D2F01B3A462A002B71F5 /* NSString+XMCommon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +343,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Guozheng Hongyin Cultural Exchanges Co.,Ltd";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Guozheng Hongyin Cultural Exchanges Co.,Ltd";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -375,7 +386,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Guozheng Hongyin Cultural Exchanges Co.,Ltd";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Guozheng Hongyin Cultural Exchanges Co.,Ltd";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -398,6 +410,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = XMCommon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -409,6 +423,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = XMCommon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

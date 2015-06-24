@@ -31,6 +31,8 @@
     [imageView setBorderWidth:2.0f withColor:[UIColor lightGrayColor]];
     [self.view addSubview:imageView];
     
+    NSLog(@"str = %@", [@"5w1EKYmTKIxk1owWbFHPoxDXa1yEeddtvo8gFA2bo1wQvK2Ot1vTQWLEc7+Dht2+dFTqviAZhUc=" urlEncode]);
+    
 //    self.view.backgroundColor = [UIColor colorWithHexString:@"0x0"];
 }
 
