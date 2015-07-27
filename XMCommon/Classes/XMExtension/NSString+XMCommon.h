@@ -15,4 +15,39 @@
  */
 - (NSString *)urlEncode;
 
+/**
+ *  获取Documents路径
+ *
+ *  @return 返回documents路径
+ */
+- (NSString *)documentPath;
+
+/**
+ *  获取缓存路径
+ *
+ *  @return 返回cache路径
+ */
+- (NSString *)cachePath;
+
+/**
+ *  验证邮箱是否有效
+ *
+ *  @return YES or NO
+ */
+- (BOOL)isValidEmail;
+
+/**
+ *  验证手机号是否有效
+ *
+ *  @return YES or NO
+ */
+- (BOOL)isValidPhoneNumber;
+
+/**
+ *   验证身份证是否有效
+ *
+ *  @return YES or NO
+ */
+- (BOOL)isValidPersonID;
+
 @end

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "XMCommon.h"
+#import "FirstViewController.h"
 
 @interface ViewController ()
 
@@ -18,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-        
+#if 0
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(60, 100, 200, 100)];
     view.backgroundColor = [UIColor cyanColor];
     [view setRCornerRadius:50 options:UIRectCornerTopLeft | UIRectCornerBottomRight];
@@ -31,9 +32,16 @@
     [imageView setBorderWidth:2.0f withColor:[UIColor lightGrayColor]];
     [self.view addSubview:imageView];
     
-    NSLog(@"str = %@", [@"5w1EKYmTKIxk1owWbFHPoxDXa1yEeddtvo8gFA2bo1wQvK2Ot1vTQWLEc7+Dht2+dFTqviAZhUc=" urlEncode]);
+    self.view.backgroundColor = [UIColor colorWithHexString:@"0x0"];
+#else
     
-//    self.view.backgroundColor = [UIColor colorWithHexString:@"0x0"];
+#endif
+}
+- (IBAction)goFirst:(id)sender {
+    
+    FirstViewController *first = [self.storyboard instantiateViewControllerWithIdentifier:@"FirstViewController"];
+    [self.navigationController pushViewController:first animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {
