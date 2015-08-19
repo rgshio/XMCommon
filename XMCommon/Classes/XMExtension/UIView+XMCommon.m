@@ -10,21 +10,25 @@
 
 @implementation UIView (XMCommon)
 
-- (CGFloat)left {
+- (CGFloat)originX
+{
     return self.frame.origin.x;
 }
 
-- (void)setLeft:(CGFloat)x {
+- (void)setOriginX:(CGFloat)x
+{
     CGRect frame = self.frame;
     frame.origin.x = x;
     self.frame = frame;
 }
 
-- (CGFloat)top {
+- (CGFloat)originY
+{
     return self.frame.origin.y;
 }
 
-- (void)setTop:(CGFloat)y {
+- (void)setOriginY:(CGFloat)y
+{
     CGRect frame = self.frame;
     frame.origin.y = y;
     self.frame = frame;
@@ -89,7 +93,7 @@
 - (CGFloat)ttScreenX {
     CGFloat x = 0;
     for (UIView *view = self; view; view = view.superview){
-        x += view.left;
+        x += view.originX;
     }
     return x;
 }
@@ -97,7 +101,7 @@
 - (CGFloat)ttScreenY {
     CGFloat y = 0;
     for (UIView *view = self; view; view = view.superview){
-        y += view.top;
+        y += view.originY;
     }
     return y;
 }
@@ -106,7 +110,7 @@
 - (CGFloat)screenViewX {
     CGFloat x = 0;
     for (UIView *view = self; view; view = view.superview){
-        x += view.left;
+        x += view.originX;
         
         if ([view isKindOfClass:[UIScrollView class]]){
             UIScrollView *scrollView = (UIScrollView*)view;
@@ -121,7 +125,7 @@
 - (CGFloat)screenViewY {
     CGFloat y = 0;
     for (UIView *view = self; view; view = view.superview){
-        y += view.top;
+        y += view.originY;
         
         if ([view isKindOfClass:[UIScrollView class]]){
             UIScrollView *scrollView = (UIScrollView*)view;
@@ -203,8 +207,8 @@
 - (CGPoint)offsetFromView:(UIView*)otherView {
     CGFloat x = 0, y = 0;
     for (UIView *view = self; view && view != otherView; view = view.superview){
-        x += view.left;
-        y += view.top;
+        x += view.originX;
+        y += view.originY;
     }
     return CGPointMake(x, y);
 }

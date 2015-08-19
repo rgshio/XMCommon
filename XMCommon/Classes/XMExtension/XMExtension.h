@@ -9,10 +9,17 @@
 #ifndef XMCommon_XMExtension_h
 #define XMCommon_XMExtension_h
 
-#import "UIView+XMCommon.h"
+#import "NSObject+XMCommon.h"
+
+#import "NSDictionary+XMCommon.h"
+#import "NSString+XMCommon.h"
+#import "NSNull+XMCommon.h"
+#import "NSData+XMCommon.h"
+
 #import "UIColor+XMCommon.h"
 #import "UIImage+XMCommon.h"
-#import "NSString+XMCommon.h"
-#import "NSObject+XMCommon.h"
+
+#import "UIView+XMCommon.h"
+#import "UILabel+XMCommon.h"
 
 #endif

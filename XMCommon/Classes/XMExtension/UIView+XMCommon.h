@@ -13,16 +13,16 @@
 /**
  *  Shortcut for frame.origin.x.
  *
- *  Sets frame.origin.x = left
+ *  Sets frame.origin.x = originX
  */
-@property (nonatomic) CGFloat left;
+@property (nonatomic) CGFloat originX;
 
 /**
  *  Shortcut for frame.origin.y
  *
- *  Sets frame.origin.y = top
+ *  Sets frame.origin.y = originY
  */
-@property (nonatomic) CGFloat top;
+@property (nonatomic) CGFloat originY;
 
 /**
  *  Shortcut for frame.origin.x + frame.size.width

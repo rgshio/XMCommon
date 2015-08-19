@@ -156,10 +156,10 @@ static UIImage *animatedImageWithAnimatedGIFReleasingImageSource(CGImageSourceRe
  *  @param image 要压缩的图片
  *  @param scaleSize 压缩比例
  */
-+ (UIImage *)scaleImage:(UIImage *)image toScale:(float)scaleSize
+- (UIImage *)scaleToSize:(float)scaleSize
 {
-    UIGraphicsBeginImageContext(CGSizeMake(image.size.width * scaleSize, image.size.height * scaleSize));
-    [image drawInRect:CGRectMake(0, 0, image.size.width * scaleSize, image.size.height * scaleSize)];
+    UIGraphicsBeginImageContext(CGSizeMake(self.size.width * scaleSize, self.size.height * scaleSize));
+    [self drawInRect:CGRectMake(0, 0, self.size.width * scaleSize, self.size.height * scaleSize)];
     UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     

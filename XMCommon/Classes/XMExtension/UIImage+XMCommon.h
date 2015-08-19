@@ -30,9 +30,9 @@
 
 /**
  *  图片压缩
- *  @param image 要压缩的图片
+ *
  *  @param scaleSize 压缩比例
  */
-+ (UIImage *)scaleImage:(UIImage *)image toScale:(float)scaleSize;
+- (UIImage *)scaleToSize:(float)scaleSize;
 
 @end

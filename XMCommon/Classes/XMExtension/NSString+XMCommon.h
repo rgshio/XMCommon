@@ -50,4 +50,11 @@
  */
 - (BOOL)isValidPersonID;
 
+/**
+ *  判断字符串非空
+ *
+ *  @return YES or NO
+ */
+- (BOOL)nonull;
+
 @end

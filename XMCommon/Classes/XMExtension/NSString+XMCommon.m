@@ -149,6 +149,19 @@
     return YES;
 }
 
+- (BOOL)nonull
+{
+    if (self != nil) {
+        return YES;
+    }
+    
+    if (self.length != 0) {
+        return YES;
+    }
+    
+    return NO;
+}
+
 #pragma mark -
 /**
  *  判断是否在地区码内

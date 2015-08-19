@@ -31,12 +31,28 @@
     imageView.image = [self.view screenShot];
     [imageView setBorderWidth:2.0f withColor:[UIColor lightGrayColor]];
     [self.view addSubview:imageView];
-    
+        
     self.view.backgroundColor = [UIColor colorWithHexString:@"0x0"];
-#else
+#elif 1
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 300, 200)];
+    label.autoText = @"你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好";
+    label.numberOfLines = 2;
+    label.font = [UIFont systemFontOfSize:18];
+    label.backgroundColor = [UIColor redColor];
+    [self.view addSubview:label];
+
+#elif 0
+    
+    NSURL *url = [NSURL URLWithString:@"http://101.201.169.97/cs/device/recommend.do?user_id=1&device=1"];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    NSDictionary *dict = [data jsonObject];
+    //字典进行非null值处理,进行字段null处理
+    NSLog(@"dict = %@ str = %@", [dict nonull], [dict objectWithKey:@"abc"]);
     
 #endif
 }
+
 - (IBAction)goFirst:(id)sender {
     
     FirstViewController *first = [self.storyboard instantiateViewControllerWithIdentifier:@"FirstViewController"];
