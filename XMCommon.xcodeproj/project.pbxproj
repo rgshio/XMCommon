@@ -25,8 +25,6 @@
 		868CF3DB1B671277000C8808 /* NSDictionary+XMCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 868CF3DA1B671277000C8808 /* NSDictionary+XMCommon.m */; };
 		868CF3DE1B6722BB000C8808 /* NSNull+XMCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 868CF3DD1B6722BB000C8808 /* NSNull+XMCommon.m */; };
 		868CF3E11B676253000C8808 /* NSData+XMCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 868CF3E01B676253000C8808 /* NSData+XMCommon.m */; };
-		868CF3E41B676761000C8808 /* UILabel+XMCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 868CF3E31B676761000C8808 /* UILabel+XMCommon.m */; };
-		86CE47D41B662CF300414895 /* NSObject+XMCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CE47D31B662CF300414895 /* NSObject+XMCommon.m */; };
 		86F5DFAA1B60D4E000AFA92D /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F5DF8A1B60D4E000AFA92D /* MKAnnotationView+WebCache.m */; };
 		86F5DFAB1B60D4E000AFA92D /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F5DF8C1B60D4E000AFA92D /* NSData+ImageContentType.m */; };
 		86F5DFAC1B60D4E000AFA92D /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F5DF8E1B60D4E000AFA92D /* SDImageCache.m */; };
@@ -110,10 +108,6 @@
 		868CF3DD1B6722BB000C8808 /* NSNull+XMCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNull+XMCommon.m"; sourceTree = "<group>"; };
 		868CF3DF1B676253000C8808 /* NSData+XMCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+XMCommon.h"; sourceTree = "<group>"; };
 		868CF3E01B676253000C8808 /* NSData+XMCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+XMCommon.m"; sourceTree = "<group>"; };
-		868CF3E21B676761000C8808 /* UILabel+XMCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+XMCommon.h"; sourceTree = "<group>"; };
-		868CF3E31B676761000C8808 /* UILabel+XMCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+XMCommon.m"; sourceTree = "<group>"; };
-		86CE47D21B662CF300414895 /* NSObject+XMCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+XMCommon.h"; sourceTree = "<group>"; };
-		86CE47D31B662CF300414895 /* NSObject+XMCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XMCommon.m"; sourceTree = "<group>"; };
 		86F5DF891B60D4E000AFA92D /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		86F5DF8A1B60D4E000AFA92D /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		86F5DF8B1B60D4E000AFA92D /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -270,8 +264,6 @@
 				868CF3E01B676253000C8808 /* NSData+XMCommon.m */,
 				8668D2EE1B3A462A002B71F5 /* NSString+XMCommon.h */,
 				8668D2EF1B3A462A002B71F5 /* NSString+XMCommon.m */,
-				86CE47D21B662CF300414895 /* NSObject+XMCommon.h */,
-				86CE47D31B662CF300414895 /* NSObject+XMCommon.m */,
 				868CF3D91B671277000C8808 /* NSDictionary+XMCommon.h */,
 				868CF3DA1B671277000C8808 /* NSDictionary+XMCommon.m */,
 				8663EC811AD65732004E902A /* UIColor+XMCommon.h */,
@@ -280,8 +272,6 @@
 				8663EC841AD65732004E902A /* UIImage+XMCommon.m */,
 				8663EC851AD65732004E902A /* UIView+XMCommon.h */,
 				8663EC861AD65732004E902A /* UIView+XMCommon.m */,
-				868CF3E21B676761000C8808 /* UILabel+XMCommon.h */,
-				868CF3E31B676761000C8808 /* UILabel+XMCommon.m */,
 				8663EC871AD65732004E902A /* XMExtension.h */,
 			);
 			path = XMExtension;
@@ -597,7 +587,6 @@
 				86F5DFB01B60D4E000AFA92D /* SDWebImageDownloaderOperation.m in Sources */,
 				86F5DFEF1B60DDE500AFA92D /* MJRefreshBackGifFooter.m in Sources */,
 				86F5DFEB1B60DDE500AFA92D /* MJRefreshHeader.m in Sources */,
-				868CF3E41B676761000C8808 /* UILabel+XMCommon.m in Sources */,
 				86F5DFEA1B60DDE500AFA92D /* MJRefreshFooter.m in Sources */,
 				86F5DFB61B60D4E000AFA92D /* UIImage+WebP.m in Sources */,
 				86F5DFB21B60D4E000AFA92D /* SDWebImagePrefetcher.m in Sources */,
@@ -623,7 +612,6 @@
 				C5E58EB21A70AC0A00734174 /* ViewController.m in Sources */,
 				8663EC901AD65732004E902A /* XMTools.m in Sources */,
 				86F5DFB51B60D4E000AFA92D /* UIImage+MultiFormat.m in Sources */,
-				86CE47D41B662CF300414895 /* NSObject+XMCommon.m in Sources */,
 				86F5DFAA1B60D4E000AFA92D /* MKAnnotationView+WebCache.m in Sources */,
 				86F5DFAB1B60D4E000AFA92D /* NSData+ImageContentType.m in Sources */,
 				86F5DFF01B60DDE500AFA92D /* MJRefreshBackNormalFooter.m in Sources */,

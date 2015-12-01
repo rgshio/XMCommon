@@ -10,8 +10,7 @@
 
 @implementation NSDictionary (XMCommon)
 
-- (NSDictionary *)nonull
-{
+- (NSDictionary *)nonull {
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     NSArray *keys = [self allKeys];
     
@@ -24,8 +23,7 @@
     return dict;
 }
 
-- (id)objectWithKey:(id)aKey
-{
+- (id)objectWithKey:(id)aKey {
     id obj = [self objectForKey:aKey];
     if (obj == NULL) {
         return @"";
@@ -35,8 +33,7 @@
 }
 
 #pragma mark -
-- (id)changeType:(id)obj
-{
+- (id)changeType:(id)obj {
     if ([obj isKindOfClass:[NSDictionary class]]) {
         return [obj nonull];
     }else if ([obj isKindOfClass:[NSArray class]]) {
@@ -48,8 +45,7 @@
     return obj;
 }
 
-- (NSArray *)nonull:(NSArray *)array
-{
+- (NSArray *)nonull:(NSArray *)array {
     NSMutableArray *list = [[NSMutableArray alloc] init];
     
     for (int i=0; i<array.count; i++) {

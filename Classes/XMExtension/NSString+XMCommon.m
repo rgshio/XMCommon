@@ -10,32 +10,27 @@
 
 @implementation NSString (XMCommon)
 
-- (NSString *)urlEncode
-{
+- (NSString *)urlEncode {
     NSString *encodeStr = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)self, NULL, CFSTR("!*'();:@&=+$,/?%#[]"), kCFStringEncodingUTF8));
     
     return encodeStr;
 }
 
-- (NSString *)documentPath
-{
+- (NSString *)documentPath {
     return [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
 }
 
-- (NSString *)cachePath
-{
+- (NSString *)cachePath {
     return [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Caches"];
 }
 
-- (BOOL)isValidEmail
-{
+- (BOOL)isValidEmail {
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:self];
 }
 
-- (BOOL)isValidPhoneNumber
-{
+- (BOOL)isValidPhoneNumber {
     /**
      * 手机号码
      * 移动：134[0-8],135,136,137,138,139,150,151,157,158,159,182,187,188
@@ -73,8 +68,7 @@
     return NO;
 }
 
-- (BOOL)isValidPersonID
-{
+- (BOOL)isValidPersonID {
     // 判断位数
     if (self.length != 15 && self.length != 18) {
         return NO;
@@ -149,8 +143,7 @@
     return YES;
 }
 
-- (BOOL)nonull
-{
+- (BOOL)nonull {
     if (self != nil) {
         return YES;
     }
@@ -168,8 +161,7 @@
  *
  *  @param code 地区码
  */
-- (BOOL)areaCode:(NSString *)code
-{
+- (BOOL)areaCode:(NSString *)code {
     NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
     [dic setObject:@"北京" forKey:@"11"];
     [dic setObject:@"天津" forKey:@"12"];
@@ -220,8 +212,7 @@
  *
  *  @param NSString 字符串的结束下标
  */
-- (NSString *)substringWithString:(NSString *)str begin:(NSInteger)begin  end:(NSInteger)end
-{
+- (NSString *)substringWithString:(NSString *)str begin:(NSInteger)begin  end:(NSInteger)end {
     return [str substringWithRange:NSMakeRange(begin, end)];
 }
 

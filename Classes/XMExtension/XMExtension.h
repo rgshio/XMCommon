@@ -20,6 +20,5 @@
 #import "UIImage+XMCommon.h"
 
 #import "UIView+XMCommon.h"
-#import "UILabel+XMCommon.h"
 
 #endif

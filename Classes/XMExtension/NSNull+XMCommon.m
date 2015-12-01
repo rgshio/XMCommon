@@ -10,18 +10,15 @@
 
 @implementation NSNull(XMCommon)
 
-- (float)floatValue
-{
+- (float)floatValue {
     return 0.0;
 }
 
-- (int)intValue
-{
+- (int)intValue {
     return 0;
 }
 
-- (int)length
-{
+- (int)length {
     return 0;
 }
 

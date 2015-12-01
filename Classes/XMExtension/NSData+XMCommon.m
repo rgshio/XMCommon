@@ -10,8 +10,7 @@
 
 @implementation NSData (XMCommon)
 
-- (id)jsonObject
-{
+- (id)jsonObject {
     id obj;
     
     if (self) {

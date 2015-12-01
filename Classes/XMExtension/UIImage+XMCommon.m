@@ -120,8 +120,7 @@ static UIImage *animatedImageWithAnimatedGIFReleasingImageSource(CGImageSourceRe
  *  播放GIF动画
  *  @param imageData 图片的data数据
  */
-+ (UIImage *)animatedImageWithAnimatedGIFData:(NSData *)imageData
-{
++ (UIImage *)animatedImageWithAnimatedGIFData:(NSData *)imageData {
     return animatedImageWithAnimatedGIFReleasingImageSource(CGImageSourceCreateWithData(toCF imageData, NULL));
 }
 
@@ -129,8 +128,7 @@ static UIImage *animatedImageWithAnimatedGIFReleasingImageSource(CGImageSourceRe
  *  播放GIF动画
  *  @param imageURL 图片的url
  */
-+ (UIImage *)animatedImageWithAnimatedGIFURL:(NSURL *)imageURL
-{
++ (UIImage *)animatedImageWithAnimatedGIFURL:(NSURL *)imageURL {
     return animatedImageWithAnimatedGIFReleasingImageSource(CGImageSourceCreateWithURL(toCF imageURL, NULL));
 }
 
@@ -138,8 +136,7 @@ static UIImage *animatedImageWithAnimatedGIFReleasingImageSource(CGImageSourceRe
  *  根据颜色得到图片
  *  @param color 图片的颜色
  */
-+ (UIImage *)imageWithColor:(UIColor *)color
-{
++ (UIImage *)imageWithColor:(UIColor *)color {
     CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -156,8 +153,7 @@ static UIImage *animatedImageWithAnimatedGIFReleasingImageSource(CGImageSourceRe
  *  @param image 要压缩的图片
  *  @param scaleSize 压缩比例
  */
-- (UIImage *)scaleToSize:(float)scaleSize
-{
+- (UIImage *)scaleToSize:(float)scaleSize {
     UIGraphicsBeginImageContext(CGSizeMake(self.size.width * scaleSize, self.size.height * scaleSize));
     [self drawInRect:CGRectMake(0, 0, self.size.width * scaleSize, self.size.height * scaleSize)];
     UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();

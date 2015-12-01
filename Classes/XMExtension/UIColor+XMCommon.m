@@ -13,8 +13,7 @@
 /**
  *  返回随机色
  */
-+ (UIColor *)randomColor
-{
++ (UIColor *)randomColor {
     int r = arc4random() % 255;
     int g = arc4random() % 255;
     int b = arc4random() % 255;
@@ -24,8 +23,7 @@
 /**
  *  十六进制转换颜色
  */
-+ (UIColor *)colorWithHexString:(NSString *)hexString
-{
++ (UIColor *)colorWithHexString:(NSString *)hexString {
     NSString *cString = [[hexString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
     
     // String should be 6 or 8 characters

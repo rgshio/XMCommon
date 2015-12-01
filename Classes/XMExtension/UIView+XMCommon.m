@@ -10,25 +10,21 @@
 
 @implementation UIView (XMCommon)
 
-- (CGFloat)originX
-{
+- (CGFloat)originX {
     return self.frame.origin.x;
 }
 
-- (void)setOriginX:(CGFloat)x
-{
+- (void)setOriginX:(CGFloat)x {
     CGRect frame = self.frame;
     frame.origin.x = x;
     self.frame = frame;
 }
 
-- (CGFloat)originY
-{
+- (CGFloat)originY {
     return self.frame.origin.y;
 }
 
-- (void)setOriginY:(CGFloat)y
-{
+- (void)setOriginY:(CGFloat)y {
     CGRect frame = self.frame;
     frame.origin.y = y;
     self.frame = frame;
@@ -195,8 +191,7 @@
     }
 }
 
-- (UIImage *)imageByRenderingView:(CGRect)f
-{
+- (UIImage *)imageByRenderingView:(CGRect)f {
     CGFloat scale = [[UIScreen mainScreen] scale];
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, scale);
     [self.layer renderInContext:UIGraphicsGetCurrentContext()];
@@ -217,8 +212,7 @@
  *  返回一个圆角化的对象(4个角)
  *  @param radius 圆角半径
  */
-- (void)setRCornerRadius:(CGFloat)radius
-{
+- (void)setRCornerRadius:(CGFloat)radius {
     self.layer.cornerRadius = radius;
     self.clipsToBounds = YES;
 }
@@ -228,8 +222,7 @@
  *  @param radius 圆角半径
  *  @param options 圆角的位置
  */
-- (void)setRCornerRadius:(CGFloat)radius options:(UIRectCorner)options
-{
+- (void)setRCornerRadius:(CGFloat)radius options:(UIRectCorner)options {
     UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:options cornerRadii:CGSizeMake(radius, radius)];
     CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
     maskLayer.frame = self.bounds;
@@ -240,8 +233,7 @@
 /**
  *  返回一个UIView的截屏, UIImage对象
  */
-- (UIImage *)screenShot
-{
+- (UIImage *)screenShot {
 	UIGraphicsBeginImageContext(self.bounds.size);
 	[[UIColor clearColor] setFill];
 	[[UIBezierPath bezierPathWithRect:self.bounds] fill];
@@ -255,8 +247,7 @@
 /**
  *  给对象加边框
  */
-- (void)setBorderWidth:(CGFloat)width withColor:(UIColor *)color
-{
+- (void)setBorderWidth:(CGFloat)width withColor:(UIColor *)color {
     self.layer.borderWidth = width;
     self.layer.borderColor = color.CGColor;
 }
