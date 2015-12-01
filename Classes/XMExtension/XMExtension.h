@@ -9,8 +9,6 @@
 #ifndef XMCommon_XMExtension_h
 #define XMCommon_XMExtension_h
 
-#import "NSObject+XMCommon.h"
-
 #import "NSDictionary+XMCommon.h"
 #import "NSString+XMCommon.h"
 #import "NSNull+XMCommon.h"

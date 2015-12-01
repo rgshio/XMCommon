@@ -36,7 +36,6 @@
 #elif 1
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 300, 200)];
-    label.autoText = @"你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好";
     label.numberOfLines = 2;
     label.font = [UIFont systemFontOfSize:18];
     label.backgroundColor = [UIColor redColor];
