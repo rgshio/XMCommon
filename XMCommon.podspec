@@ -3,9 +3,7 @@ Pod::Spec.new do |s|
   s.version      = "0.0.1"
   s.license      = 'MIT'
   s.summary      = 'XMCommon is a common class.'
-  s.description  = <<-DESC
-                   It is always used on iOS, which implement by Objective-C.
-                   DESC
+  s.description  = {}
   s.homepage     = 'https://github.com/rgshio/XMCommon'
   s.author       = { 'rgshio' => 'xzy0819@qq.com' }
 
