@@ -51,10 +51,18 @@
 - (BOOL)isValidPersonID;
 
 /**
- *  判断字符串非空
+ *  判断字符串是否为空
  *
  *  @return YES or NO
  */
-- (BOOL)nonull;
+- (BOOL)ifnull;
+
+
+/**
+ *  判断字符是否为数字
+ *
+ *  @return YES or NO
+ */
+- (BOOL)isPureInt;
 
 @end
