@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'XMCommon'
-  s.version      = '0.0.1'
+  s.version      = '0.0.3'
   s.license      = 'MIT'
   s.summary      = 'extension class.'
   s.description  = %{XMCommon is a extension Class.}
