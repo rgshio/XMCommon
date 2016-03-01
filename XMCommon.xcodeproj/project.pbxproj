@@ -22,6 +22,7 @@
 		8668D2F01B3A462A002B71F5 /* NSString+XMCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8668D2EF1B3A462A002B71F5 /* NSString+XMCommon.m */; };
 		8668D2F11B3A4A4E002B71F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E58EB31A70AC0A00734174 /* Main.storyboard */; };
 		8668D2F21B3A4A4F002B71F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E58EB31A70AC0A00734174 /* Main.storyboard */; };
+		868B14EA1C8589050022D880 /* NSArray+XMCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 868B14E91C8589050022D880 /* NSArray+XMCommon.m */; };
 		868CF3DB1B671277000C8808 /* NSDictionary+XMCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 868CF3DA1B671277000C8808 /* NSDictionary+XMCommon.m */; };
 		868CF3DE1B6722BB000C8808 /* NSNull+XMCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 868CF3DD1B6722BB000C8808 /* NSNull+XMCommon.m */; };
 		868CF3E11B676253000C8808 /* NSData+XMCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 868CF3E01B676253000C8808 /* NSData+XMCommon.m */; };
@@ -102,6 +103,8 @@
 		8663EC8C1AD65732004E902A /* XMTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMTools.m; sourceTree = "<group>"; };
 		8668D2EE1B3A462A002B71F5 /* NSString+XMCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XMCommon.h"; sourceTree = "<group>"; };
 		8668D2EF1B3A462A002B71F5 /* NSString+XMCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XMCommon.m"; sourceTree = "<group>"; };
+		868B14E81C8589050022D880 /* NSArray+XMCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+XMCommon.h"; sourceTree = "<group>"; };
+		868B14E91C8589050022D880 /* NSArray+XMCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+XMCommon.m"; sourceTree = "<group>"; };
 		868CF3D91B671277000C8808 /* NSDictionary+XMCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+XMCommon.h"; sourceTree = "<group>"; };
 		868CF3DA1B671277000C8808 /* NSDictionary+XMCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+XMCommon.m"; sourceTree = "<group>"; };
 		868CF3DC1B6722BB000C8808 /* NSNull+XMCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull+XMCommon.h"; sourceTree = "<group>"; };
@@ -258,6 +261,8 @@
 		8663EC801AD65732004E902A /* XMExtension */ = {
 			isa = PBXGroup;
 			children = (
+				868B14E81C8589050022D880 /* NSArray+XMCommon.h */,
+				868B14E91C8589050022D880 /* NSArray+XMCommon.m */,
 				868CF3DC1B6722BB000C8808 /* NSNull+XMCommon.h */,
 				868CF3DD1B6722BB000C8808 /* NSNull+XMCommon.m */,
 				868CF3DF1B676253000C8808 /* NSData+XMCommon.h */,
@@ -591,6 +596,7 @@
 				86F5DFB61B60D4E000AFA92D /* UIImage+WebP.m in Sources */,
 				86F5DFB21B60D4E000AFA92D /* SDWebImagePrefetcher.m in Sources */,
 				86F5DFAC1B60D4E000AFA92D /* SDImageCache.m in Sources */,
+				868B14EA1C8589050022D880 /* NSArray+XMCommon.m in Sources */,
 				86F5DFEC1B60DDE500AFA92D /* MJRefreshAutoGifFooter.m in Sources */,
 				86F5DFF41B60DDE500AFA92D /* MJRefreshStateHeader.m in Sources */,
 				86F5DFE71B60DDE500AFA92D /* MJRefreshAutoFooter.m in Sources */,

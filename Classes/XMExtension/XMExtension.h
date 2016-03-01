@@ -13,6 +13,7 @@
 #import "NSString+XMCommon.h"
 #import "NSNull+XMCommon.h"
 #import "NSData+XMCommon.h"
+#import "NSArray+XMCommon.h"
 
 #import "UIColor+XMCommon.h"
 #import "UIImage+XMCommon.h"
