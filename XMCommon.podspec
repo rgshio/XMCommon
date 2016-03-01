@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'XMCommon'
-  s.version      = '0.0.3'
+  s.version      = '0.0.4'
   s.license      = 'MIT'
   s.summary      = 'extension class.'
   s.description  = %{XMCommon is a extension Class.}
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Classes/XMExtension/*.{h,m}'
   s.ios.frameworks = 'Foundation', 'UIKit'
-  s.ios.deployment_target = '6.0' # minimum SDK with autolayout
+  s.ios.deployment_target = '7.0' # minimum SDK with autolayout
 
   s.requires_arc = true
 
