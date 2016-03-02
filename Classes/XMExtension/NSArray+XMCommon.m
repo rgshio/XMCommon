@@ -29,33 +29,25 @@
 }
 
 - (instancetype)xm_objectAtIndex_I:(NSInteger)index {
-    if (index > self.count-1) {
-        @try {
-            [self xm_objectAtIndex_I:index];
-        }
-        @catch (NSException *exception) {
-            NSLog(@"-------%s Crash Method Class %s-------", class_getName(self.class), __func__);
-        }
-        @finally {}
-        return nil;
-    }else {
+    @try {
         return [self xm_objectAtIndex_I:index];
     }
+    @catch (NSException *exception) {
+        NSLog(@"-------%s Crash Method Class %s-------", class_getName(self.class), __func__);
+    }
+    @finally {}
+    return nil;
 }
 
 - (instancetype)xm_objectAtIndex_M:(NSInteger)index {
-    if (index > self.count-1) {
-        @try {
-            [self xm_objectAtIndex_M:index];
-        }
-        @catch (NSException *exception) {
-            NSLog(@"-------%s Crash Method Class %s-------", class_getName(self.class), __func__);
-        }
-        @finally {}
-        return nil;
-    }else {
+    @try {
         return [self xm_objectAtIndex_M:index];
     }
+    @catch (NSException *exception) {
+        NSLog(@"-------%s Crash Method Class %s-------", class_getName(self.class), __func__);
+    }
+    @finally {}
+    return nil;
 }
 
 @end
