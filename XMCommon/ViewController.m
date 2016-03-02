@@ -40,7 +40,11 @@
     label.font = [UIFont systemFontOfSize:18];
     label.backgroundColor = [UIColor redColor];
     [self.view addSubview:label];
-
+    
+    NSString *str = nil;
+    NSMutableDictionary *dict = [NSMutableDictionary new];
+    [dict setObject:str forKey:@"123"];
+    
 #elif 0
     
     NSURL *url = [NSURL URLWithString:@"http://101.201.169.97/cs/device/recommend.do?user_id=1&device=1"];

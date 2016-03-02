@@ -13,15 +13,25 @@
 
 + (void)load {
     [super load];
-    Method fromMethod = class_getInstanceMethod(objc_getClass("__NSArrayI"), @selector(objectAtIndex:));
-    Method toMethod = class_getInstanceMethod(objc_getClass("__NSArrayI"), @selector(xmObjectAtIndex:));
-    method_exchangeImplementations(fromMethod, toMethod);
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        Method originMethod;
+        Method overrideMethod;
+        originMethod = class_getInstanceMethod(objc_getClass("__NSArrayI"), @selector(objectAtIndex:));
+        overrideMethod = class_getInstanceMethod(objc_getClass("__NSArrayI"), @selector(xm_objectAtIndex_I:));
+        method_exchangeImplementations(originMethod, overrideMethod);
+        
+        originMethod = class_getInstanceMethod(objc_getClass("__NSArrayM"), @selector(objectAtIndex:));
+        overrideMethod = class_getInstanceMethod(objc_getClass("__NSArrayM"), @selector(xm_objectAtIndex_M:));
+        method_exchangeImplementations(originMethod, overrideMethod);
+    });
 }
 
-- (instancetype)xmObjectAtIndex:(NSInteger)index {
+- (instancetype)xm_objectAtIndex_I:(NSInteger)index {
     if (index > self.count-1) {
         @try {
-            [self xmObjectAtIndex:index];
+            [self xm_objectAtIndex_I:index];
         }
         @catch (NSException *exception) {
             NSLog(@"-------%s Crash Method Class %s-------", class_getName(self.class), __func__);
@@ -29,7 +39,22 @@
         @finally {}
         return nil;
     }else {
-        [self xmObjectAtIndex:index];
+        return [self xm_objectAtIndex_I:index];
+    }
+}
+
+- (instancetype)xm_objectAtIndex_M:(NSInteger)index {
+    if (index > self.count-1) {
+        @try {
+            [self xm_objectAtIndex_M:index];
+        }
+        @catch (NSException *exception) {
+            NSLog(@"-------%s Crash Method Class %s-------", class_getName(self.class), __func__);
+        }
+        @finally {}
+        return nil;
+    }else {
+        return [self xm_objectAtIndex_M:index];
     }
 }
 
