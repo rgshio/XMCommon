@@ -19,5 +19,6 @@
 #import "UIImage+XMCommon.h"
 
 #import "UIView+XMCommon.h"
+#import "NSCoder+XMCommon.h"
 
 #endif

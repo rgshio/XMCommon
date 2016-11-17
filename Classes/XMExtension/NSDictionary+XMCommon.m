@@ -49,10 +49,14 @@
 - (id)objectWithKey:(id)aKey {
     id obj = [self objectForKey:aKey];
     if (obj == NULL) {
-        return @"";
+        return nil;
+    }else {
+        if ([obj isKindOfClass:[NSNumber class]]) {
+            return [NSString stringWithFormat:@"%@", obj];
+        }else {
+            return obj;
+        }
     }
-    
-    return obj;
 }
 
 #pragma mark -
