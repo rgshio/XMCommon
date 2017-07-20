@@ -11,7 +11,7 @@
 @implementation NSData (XMCommon)
 
 - (id)jsonObject {
-    id obj;
+    id obj = nil;
     
     if (self) {
         

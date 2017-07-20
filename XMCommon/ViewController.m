@@ -33,7 +33,7 @@
     [self.view addSubview:imageView];
         
     self.view.backgroundColor = [UIColor colorWithHexString:@"0x0"];
-#elif 1
+#elif 0
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 300, 200)];
     label.numberOfLines = 2;
@@ -52,6 +52,19 @@
     NSDictionary *dict = [data jsonObject];
     //字典进行非null值处理,进行字段null处理
     NSLog(@"dict = %@ str = %@", [dict nonull], [dict objectWithKey:@"abc"]);
+    
+#elif 1
+    NSString *email = @"asdf@163.com";
+    NSLog(@"valid email is ok %@", email.isValidEmail ? @"YES" : @"NO");
+    
+    NSString *phone = @"11111111111";
+    NSLog(@"valid phone number is ok %@", phone.isValidPhoneNumber ? @"YES" : @"NO");
+    
+    NSString *person = @"111111111111111111";
+    NSLog(@"valid person id is ok %@", person.isValidPersonID ? @"YES" : @"NO");
+    
+    NSString *aes = @"123";
+    NSLog(@"eaes = %@\ndaes = %@", aes.encryptAES, aes.encryptAES.decryptAES);
     
 #endif
 }

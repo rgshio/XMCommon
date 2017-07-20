@@ -11,8 +11,7 @@
 @implementation XMTools
 
 #pragma mark - 判断空字符串
-+ (BOOL)isBlankString:(NSString*)string
-{
++ (BOOL)isBlankString:(NSString*)string {
     if (string == nil || string == NULL) {
         return YES;
     }
@@ -26,16 +25,14 @@
 }
 
 #pragma mark - 取当前时间
-+ (NSString *)getDateTime
-{
++ (NSString *)getDateTime {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     return [dateFormatter stringFromDate:[NSDate date]];
 }
 
 #pragma mark - 生成唯一字符
-+ (NSString *)getUUIDStr
-{
++ (NSString *)getUUIDStr {
     NSString *  result;
     CFUUIDRef   uuid;
     CFStringRef uuidStr;
@@ -57,8 +54,7 @@
 }
 
 #pragma mark - 判断文件是否存在
-+ (BOOL)fileExist:(NSString *)filepath
-{
++ (BOOL)fileExist:(NSString *)filepath {
     NSFileManager *manager = [NSFileManager defaultManager];
     return [manager fileExistsAtPath:filepath];
 }

@@ -25,29 +25,51 @@
         originMethod = class_getInstanceMethod(objc_getClass("__NSArrayM"), @selector(objectAtIndex:));
         overrideMethod = class_getInstanceMethod(objc_getClass("__NSArrayM"), @selector(xm_objectAtIndex_M:));
         method_exchangeImplementations(originMethod, overrideMethod);
+        
+        originMethod = class_getInstanceMethod(objc_getClass("__NSArrayM"), @selector(addObject:));
+        overrideMethod = class_getInstanceMethod(objc_getClass("__NSArrayM"), @selector(xm_addObject:));
+        method_exchangeImplementations(originMethod, overrideMethod);
     });
 }
 
 - (instancetype)xm_objectAtIndex_I:(NSInteger)index {
-    @try {
+    if (index > self.count-1) {
+        @try {
+            [self xm_objectAtIndex_I:index];
+        }
+        @catch (NSException *exception) {
+            NSLog(@"-------%s Crash Method Class %s-------", class_getName(self.class), __func__);
+        }
+        @finally {}
+        return nil;
+    }else {
         return [self xm_objectAtIndex_I:index];
     }
-    @catch (NSException *exception) {
-        NSLog(@"-------%s Crash Method Class %s-------", class_getName(self.class), __func__);
-    }
-    @finally {}
-    return nil;
 }
 
 - (instancetype)xm_objectAtIndex_M:(NSInteger)index {
-    @try {
+    if (index > self.count-1) {
+        @try {
+            [self xm_objectAtIndex_M:index];
+        }
+        @catch (NSException *exception) {
+            NSLog(@"-------%s Crash Method Class %s-------", class_getName(self.class), __func__);
+        }
+        @finally {}
+        return nil;
+    }else {
         return [self xm_objectAtIndex_M:index];
+    }
+}
+
+- (void)xm_addObject:(id)anObject {
+    @try {
+        [self xm_addObject:anObject];
     }
     @catch (NSException *exception) {
         NSLog(@"-------%s Crash Method Class %s-------", class_getName(self.class), __func__);
     }
     @finally {}
-    return nil;
 }
 
 @end
