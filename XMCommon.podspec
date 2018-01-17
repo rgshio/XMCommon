@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name         = 'XMCommon'
-  s.version      = '0.0.7'
+  s.version      = '0.1.0'
   s.license      = 'MIT'
   s.summary      = 'extension class.'
   s.description  = %{XMCommon is a extension Class.}
   s.homepage     = 'https://github.com/rgshio/XMCommon'
-  s.author       = { 'rgshio' => 'xzy0819@qq.com' }
+  s.author       = { 'rgshio' => 'rgshio@qq.com' }
 
   s.source       = { :git => 'https://github.com/rgshio/XMCommon.git', :tag => "v#{s.version}" }
 
