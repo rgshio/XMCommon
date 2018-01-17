@@ -14,6 +14,8 @@
 		8621B28A1B60CA3F00DD5131 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8621B2891B60CA3F00DD5131 /* CoreLocation.framework */; };
 		8621B28C1B60CA4E00DD5131 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8621B28B1B60CA4E00DD5131 /* SystemConfiguration.framework */; };
 		8621B28E1B60CA7800DD5131 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8621B28D1B60CA7800DD5131 /* MobileCoreServices.framework */; };
+		862A5F901F29B66B0020B226 /* XMImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 862A5F8F1F29B66B0020B226 /* XMImageView.m */; };
+		862A5F931F29B6A40020B226 /* XMButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 862A5F921F29B6A40020B226 /* XMButton.m */; };
 		8644A46C1B4B627800A80A49 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8644A46B1B4B627800A80A49 /* FirstViewController.m */; };
 		8663EC8D1AD65732004E902A /* UIColor+XMCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8663EC821AD65732004E902A /* UIColor+XMCommon.m */; };
 		8663EC8E1AD65732004E902A /* UIImage+XMCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8663EC841AD65732004E902A /* UIImage+XMCommon.m */; };
@@ -62,6 +64,9 @@
 		86F5DFF71B60DDE500AFA92D /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F5DFE21B60DDE500AFA92D /* UIScrollView+MJExtension.m */; };
 		86F5DFF81B60DDE500AFA92D /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F5DFE41B60DDE500AFA92D /* UIScrollView+MJRefresh.m */; };
 		86F5DFF91B60DDE500AFA92D /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F5DFE61B60DDE500AFA92D /* UIView+MJExtension.m */; };
+		86FFB93B1F4280B7005C5C9A /* PDFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86FFB93A1F4280B7005C5C9A /* PDFView.m */; };
+		86FFB93D1F428829005C5C9A /* 123.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 86FFB93C1F428829005C5C9A /* 123.pdf */; };
+		86FFB9401F42CE60005C5C9A /* PDFZoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86FFB93F1F42CE60005C5C9A /* PDFZoomView.m */; };
 		C5E58EAC1A70AC0A00734174 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E58EAB1A70AC0A00734174 /* main.m */; };
 		C5E58EAF1A70AC0A00734174 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E58EAE1A70AC0A00734174 /* AppDelegate.m */; };
 		C5E58EB21A70AC0A00734174 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E58EB11A70AC0A00734174 /* ViewController.m */; };
@@ -87,6 +92,10 @@
 		8621B2891B60CA3F00DD5131 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8621B28B1B60CA4E00DD5131 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8621B28D1B60CA7800DD5131 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		862A5F8E1F29B66B0020B226 /* XMImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMImageView.h; sourceTree = "<group>"; };
+		862A5F8F1F29B66B0020B226 /* XMImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMImageView.m; sourceTree = "<group>"; };
+		862A5F911F29B6A40020B226 /* XMButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMButton.h; sourceTree = "<group>"; };
+		862A5F921F29B6A40020B226 /* XMButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMButton.m; sourceTree = "<group>"; };
 		8644A46A1B4B627800A80A49 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		8644A46B1B4B627800A80A49 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		8663EC7E1AD65732004E902A /* XMCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMCommon.h; sourceTree = "<group>"; };
@@ -185,6 +194,11 @@
 		86F5DFE41B60DDE500AFA92D /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		86F5DFE51B60DDE500AFA92D /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		86F5DFE61B60DDE500AFA92D /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		86FFB9391F4280B7005C5C9A /* PDFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFView.h; sourceTree = "<group>"; };
+		86FFB93A1F4280B7005C5C9A /* PDFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFView.m; sourceTree = "<group>"; };
+		86FFB93C1F428829005C5C9A /* 123.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 123.pdf; sourceTree = "<group>"; };
+		86FFB93E1F42CE60005C5C9A /* PDFZoomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFZoomView.h; sourceTree = "<group>"; };
+		86FFB93F1F42CE60005C5C9A /* PDFZoomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFZoomView.m; sourceTree = "<group>"; };
 		C5E58EA61A70AC0A00734174 /* XMCommon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMCommon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E58EAA1A70AC0A00734174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5E58EAB1A70AC0A00734174 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -248,11 +262,23 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
+		862A5F8D1F29B65C0020B226 /* XMIBDesignable */ = {
+			isa = PBXGroup;
+			children = (
+				862A5F8E1F29B66B0020B226 /* XMImageView.h */,
+				862A5F8F1F29B66B0020B226 /* XMImageView.m */,
+				862A5F911F29B6A40020B226 /* XMButton.h */,
+				862A5F921F29B6A40020B226 /* XMButton.m */,
+			);
+			path = XMIBDesignable;
+			sourceTree = "<group>";
+		};
 		8663EC7D1AD65732004E902A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				8663EC7E1AD65732004E902A /* XMCommon.h */,
 				8663EC7F1AD65732004E902A /* XMCommonConfig.h */,
+				862A5F8D1F29B65C0020B226 /* XMIBDesignable */,
 				8663EC801AD65732004E902A /* XMExtension */,
 				8663EC881AD65732004E902A /* XMResource */,
 				8663EC8B1AD65732004E902A /* XMTools.h */,
@@ -429,6 +455,18 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		86FFB9381F4280A7005C5C9A /* PDFView */ = {
+			isa = PBXGroup;
+			children = (
+				86FFB93C1F428829005C5C9A /* 123.pdf */,
+				86FFB9391F4280B7005C5C9A /* PDFView.h */,
+				86FFB93A1F4280B7005C5C9A /* PDFView.m */,
+				86FFB93E1F42CE60005C5C9A /* PDFZoomView.h */,
+				86FFB93F1F42CE60005C5C9A /* PDFZoomView.m */,
+			);
+			path = PDFView;
+			sourceTree = "<group>";
+		};
 		C5E58E9D1A70AC0A00734174 = {
 			isa = PBXGroup;
 			children = (
@@ -453,6 +491,7 @@
 		C5E58EA81A70AC0A00734174 /* XMCommon */ = {
 			isa = PBXGroup;
 			children = (
+				86FFB9381F4280A7005C5C9A /* PDFView */,
 				C5E58EAD1A70AC0A00734174 /* AppDelegate.h */,
 				C5E58EAE1A70AC0A00734174 /* AppDelegate.m */,
 				C5E58EB01A70AC0A00734174 /* ViewController.h */,
@@ -573,6 +612,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5E58EB71A70AC0A00734174 /* Images.xcassets in Resources */,
+				86FFB93D1F428829005C5C9A /* 123.pdf in Resources */,
 				8668D2F11B3A4A4E002B71F5 /* Main.storyboard in Resources */,
 				86F5DFF51B60DDE500AFA92D /* MJRefresh.bundle in Resources */,
 			);
@@ -594,11 +634,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				868CF3E11B676253000C8808 /* NSData+XMCommon.m in Sources */,
+				86FFB93B1F4280B7005C5C9A /* PDFView.m in Sources */,
 				86F5DFB01B60D4E000AFA92D /* SDWebImageDownloaderOperation.m in Sources */,
 				86F5DFEF1B60DDE500AFA92D /* MJRefreshBackGifFooter.m in Sources */,
 				86F5DFEB1B60DDE500AFA92D /* MJRefreshHeader.m in Sources */,
 				86F5DFEA1B60DDE500AFA92D /* MJRefreshFooter.m in Sources */,
 				86F5DFB61B60D4E000AFA92D /* UIImage+WebP.m in Sources */,
+				862A5F931F29B6A40020B226 /* XMButton.m in Sources */,
 				86F5DFB21B60D4E000AFA92D /* SDWebImagePrefetcher.m in Sources */,
 				86F5DFAC1B60D4E000AFA92D /* SDImageCache.m in Sources */,
 				868B14EA1C8589050022D880 /* NSArray+XMCommon.m in Sources */,
@@ -613,6 +655,7 @@
 				86F5DFB91B60D4E000AFA92D /* UIView+WebCacheOperation.m in Sources */,
 				86F5DFAD1B60D4E000AFA92D /* SDWebImageCompat.m in Sources */,
 				86F5DFF11B60DDE500AFA92D /* MJRefreshBackStateFooter.m in Sources */,
+				862A5F901F29B66B0020B226 /* XMImageView.m in Sources */,
 				8682E5511DDD36CE0015A5DB /* NSCoder+XMCommon.m in Sources */,
 				86F5DFE81B60DDE500AFA92D /* MJRefreshBackFooter.m in Sources */,
 				868CF3DE1B6722BB000C8808 /* NSNull+XMCommon.m in Sources */,
@@ -620,6 +663,7 @@
 				86F5DFAE1B60D4E000AFA92D /* SDWebImageDecoder.m in Sources */,
 				86F5DFF71B60DDE500AFA92D /* UIScrollView+MJExtension.m in Sources */,
 				86F5DFF91B60DDE500AFA92D /* UIView+MJExtension.m in Sources */,
+				86FFB9401F42CE60005C5C9A /* PDFZoomView.m in Sources */,
 				86F5DFB71B60D4E000AFA92D /* UIImageView+HighlightedWebCache.m in Sources */,
 				C5E58EB21A70AC0A00734174 /* ViewController.m in Sources */,
 				8663EC901AD65732004E902A /* XMTools.m in Sources */,
@@ -769,7 +813,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = XMCommon/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OBJROOT = "$(SYMROOT)/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -782,7 +826,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = XMCommon/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OBJROOT = "$(SYMROOT)/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

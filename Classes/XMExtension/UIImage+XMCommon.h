@@ -35,4 +35,11 @@
  */
 - (UIImage *)scaleToSize:(float)scaleSize;
 
+/**
+ *  图片旋转
+ *
+ *  @param degrees 旋转度数
+ */
+- (UIImage*)imageRotatedByDegrees:(CGFloat)degrees;
+
 @end

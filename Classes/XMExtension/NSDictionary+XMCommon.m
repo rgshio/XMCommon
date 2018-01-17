@@ -24,17 +24,11 @@
 }
 
 - (void)xm_setObject:(id)anObject forKey:(id)aKey {
-    if (anObject == nil) {
-        @try {
-            [self xm_setObject:anObject forKey:aKey];
-        }
-        @catch (NSException *exception) {
-            NSLog(@"-------%s Crash Method Class %s-------", class_getName(self.class), __func__);
-        }
-        @finally {}
-    }else {
-        [self xm_setObject:anObject forKey:aKey];
+    if (!anObject) {
+        return;
     }
+    
+    [self xm_setObject:anObject forKey:aKey];
 }
 
 - (NSDictionary *)nonull {

@@ -14,62 +14,80 @@
 + (void)load {
     [super load];
     
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        Method originMethod;
-        Method overrideMethod;
-        originMethod = class_getInstanceMethod(objc_getClass("__NSArrayI"), @selector(objectAtIndex:));
-        overrideMethod = class_getInstanceMethod(objc_getClass("__NSArrayI"), @selector(xm_objectAtIndex_I:));
-        method_exchangeImplementations(originMethod, overrideMethod);
-        
-        originMethod = class_getInstanceMethod(objc_getClass("__NSArrayM"), @selector(objectAtIndex:));
-        overrideMethod = class_getInstanceMethod(objc_getClass("__NSArrayM"), @selector(xm_objectAtIndex_M:));
-        method_exchangeImplementations(originMethod, overrideMethod);
-        
-        originMethod = class_getInstanceMethod(objc_getClass("__NSArrayM"), @selector(addObject:));
-        overrideMethod = class_getInstanceMethod(objc_getClass("__NSArrayM"), @selector(xm_addObject:));
-        method_exchangeImplementations(originMethod, overrideMethod);
-    });
+    Method originMethod;
+    Method overrideMethod;
+    //解决不可变数组越界问题
+    originMethod = class_getInstanceMethod(objc_getClass("__NSArrayI"), @selector(objectAtIndex:));
+    overrideMethod = class_getInstanceMethod(objc_getClass("__NSArrayI"), @selector(xm_objectAtIndex_I:));
+    method_exchangeImplementations(originMethod, overrideMethod);
+    
+    //解决可变数组越界问题
+    originMethod = class_getInstanceMethod(objc_getClass("__NSArrayM"), @selector(objectAtIndex:));
+    overrideMethod = class_getInstanceMethod(objc_getClass("__NSArrayM"), @selector(xm_objectAtIndex_M:));
+    method_exchangeImplementations(originMethod, overrideMethod);
+    
+    //解决可变数组添加nil问题
+    originMethod = class_getInstanceMethod(objc_getClass("__NSArrayM"), @selector(addObject:));
+    overrideMethod = class_getInstanceMethod(objc_getClass("__NSArrayM"), @selector(xm_addObject:));
+    method_exchangeImplementations(originMethod, overrideMethod);
+    
+    //解决不可变数组添加nil问题
+    originMethod = class_getInstanceMethod(objc_getClass("__NSPlaceholderArray"), @selector(initWithObjects:count:));
+    overrideMethod = class_getInstanceMethod(objc_getClass("__NSPlaceholderArray"), @selector(xm_initWithObjects:count:));
+    method_exchangeImplementations(originMethod, overrideMethod);
 }
 
 - (instancetype)xm_objectAtIndex_I:(NSInteger)index {
     if (index > self.count-1) {
-        @try {
-            [self xm_objectAtIndex_I:index];
-        }
-        @catch (NSException *exception) {
-            NSLog(@"-------%s Crash Method Class %s-------", class_getName(self.class), __func__);
-        }
-        @finally {}
         return nil;
-    }else {
-        return [self xm_objectAtIndex_I:index];
     }
+    
+    return [self xm_objectAtIndex_I:index];
 }
 
 - (instancetype)xm_objectAtIndex_M:(NSInteger)index {
     if (index > self.count-1) {
-        @try {
-            [self xm_objectAtIndex_M:index];
-        }
-        @catch (NSException *exception) {
-            NSLog(@"-------%s Crash Method Class %s-------", class_getName(self.class), __func__);
-        }
-        @finally {}
         return nil;
-    }else {
-        return [self xm_objectAtIndex_M:index];
     }
+    
+    return [self xm_objectAtIndex_M:index];
 }
 
 - (void)xm_addObject:(id)anObject {
-    @try {
-        [self xm_addObject:anObject];
+    if (!anObject) {
+        return;
     }
-    @catch (NSException *exception) {
-        NSLog(@"-------%s Crash Method Class %s-------", class_getName(self.class), __func__);
+    
+    [self xm_addObject:anObject];
+}
+
+- (instancetype)xm_initWithObjects:(const id  _Nonnull     __unsafe_unretained *)objects count:(NSUInteger)cnt {
+    BOOL hasNilObject = NO;
+    for (NSUInteger i = 0; i < cnt; i++) {
+        if ([objects[i] isKindOfClass:[NSArray class]]) {
+            NSLog(@"%@", objects[i]);
+        }
+        if (objects[i] == nil) {
+            hasNilObject = YES;
+            NSLog(@"%s object at index %lu is nil, it will be     filtered", __FUNCTION__, i);
+        }
     }
-    @finally {}
+    
+    // 因为有值为nil的元素，那么我们可以过滤掉值为nil的元素
+    if (hasNilObject) {
+        id __unsafe_unretained newObjects[cnt];
+        NSUInteger index = 0;
+        for (NSUInteger i = 0; i < cnt; ++i) {
+            if (objects[i] != nil) {
+                newObjects[index++] = objects[i];
+            }else {
+                newObjects[index++] = @"";
+            }
+        }
+        return [self xm_initWithObjects:newObjects count:index];
+    }
+    return [self xm_initWithObjects:objects count:cnt];
 }
 
 @end
+

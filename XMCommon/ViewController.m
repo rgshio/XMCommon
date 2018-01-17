@@ -9,12 +9,17 @@
 #import "ViewController.h"
 #import "XMCommon.h"
 #import "FirstViewController.h"
+#import "PDFView.h"
 
-@interface ViewController ()
+@interface ViewController () 
 
 @end
 
 @implementation ViewController
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -53,7 +58,7 @@
     //字典进行非null值处理,进行字段null处理
     NSLog(@"dict = %@ str = %@", [dict nonull], [dict objectWithKey:@"abc"]);
     
-#elif 1
+#elif 0
     NSString *email = @"asdf@163.com";
     NSLog(@"valid email is ok %@", email.isValidEmail ? @"YES" : @"NO");
     
@@ -64,7 +69,9 @@
     NSLog(@"valid person id is ok %@", person.isValidPersonID ? @"YES" : @"NO");
     
     NSString *aes = @"123";
-    NSLog(@"eaes = %@\ndaes = %@", aes.encryptAES, aes.encryptAES.decryptAES);
+    NSLog(@"eaes = %@\ndaes = %@", [aes encryptAESWithKey:@""], [[aes encryptAESWithKey:@""] decryptAESWithKey:@""]);
+#elif 1
+    
     
 #endif
 }
