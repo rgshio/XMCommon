@@ -7,6 +7,8 @@
 //
 
 #import "NSString+XMCommon.h"
+#import <CommonCrypto/CommonDigest.h>
+#import <CommonCrypto/CommonCryptor.h>
 
 @implementation NSString (XMCommon)
 
@@ -210,6 +212,7 @@
 /**
  *  获取指定范围的字符串
  *
+ *  @param str 字符串
  *  @param begin 字符串的开始小标
  *  @param end 字符串的结束下标
  */
