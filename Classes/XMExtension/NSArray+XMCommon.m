@@ -61,15 +61,15 @@
     [self xm_addObject:anObject];
 }
 
-- (instancetype)xm_initWithObjects:(const id  _Nonnull     __unsafe_unretained *)objects count:(NSUInteger)cnt {
+- (instancetype)xm_initWithObjects:(const id  _Nonnull __unsafe_unretained *)objects count:(NSUInteger)cnt {
     BOOL hasNilObject = NO;
     for (NSUInteger i = 0; i < cnt; i++) {
         if ([objects[i] isKindOfClass:[NSArray class]]) {
-            NSLog(@"%@", objects[i]);
+//            NSLog(@"%@", objects[i]);
         }
         if (objects[i] == nil) {
             hasNilObject = YES;
-            NSLog(@"%s object at index %lu is nil, it will be     filtered", __FUNCTION__, i);
+//            NSLog(@"%s object at index %lu is nil, it will be filtered", __FUNCTION__, i);
         }
     }
     

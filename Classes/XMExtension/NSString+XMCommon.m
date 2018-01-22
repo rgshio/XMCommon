@@ -210,8 +210,8 @@
 /**
  *  获取指定范围的字符串
  *
- *  @param NSString 字符串的开始小标
- *  @param NSString 字符串的结束下标
+ *  @param begin 字符串的开始小标
+ *  @param end 字符串的结束下标
  */
 - (NSString *)substringWithString:(NSString *)str begin:(NSInteger)begin end:(NSInteger)end {
     return [str substringWithRange:NSMakeRange(begin, end)];
