@@ -64,6 +64,6 @@
  *  @param keysize   密钥的大小
  *  @param key       加密或解密的key
  */
-- (NSString *)operation:(CCOperation)operation algorithm:(CCAlgorithm)algorithm blocksize:(size_t)blocksize keysize:(size_t)keysize key:(NSString *)key;
+//- (NSString *)operation:(CCOperation)operation algorithm:(CCAlgorithm)algorithm blocksize:(size_t)blocksize keysize:(size_t)keysize key:(NSString *)key;
 
 @end
